@@ -1,54 +1,60 @@
-<div class="row justify-content-center">
-  <div class="col-4 window">
-    <div class="row bg-primary">
-      <div class="col-12">
-        <h2>Intercom</h2>
-        <p>We help your business grow by connecting you to your customers.</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4 window">
+      <div class="row bg-primary">
+        <div class="col-1"><mat-icon matSuffix>arrow_back_ios</mat-icon></div>
+        <div class="col-11">
+          <h4>Intercom</h4>
+          <p>We help your business grow by connecting you to your customers.</p>
+        </div>
+        <div class="col-12">
+          <ul class="members-list">
+            <li>
+              <img src="../assets/img/image1.jpg" /><br />
+              <span>Aparna</span>
+            </li>
+            <li>
+              <img src="../assets/img/image1.jpg" /><br />
+              <span>Aparna</span>
+            </li>
+            <li>
+              <img src="../assets/img/image1.jpg" /><br />
+              <span>Aparna</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-11">
+          <br />
+          <p>The team typically replies in few hours.</p>
+        </div>
       </div>
-      <div class="col-12">
-        <ul class="members-list">
-          <li>
-            <img src="../assets/img/image1.jpg" /><br />
-            <span>Aparna</span>
-          </li>
-          <li>
-            <img src="../assets/img/image1.jpg" /><br />
-            <span>Aparna</span>
-          </li>
-          <li>
-            <img src="../assets/img/image1.jpg" /><br />
-            <span>Aparna</span>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12"><p>The team typically replies in few hours.</p></div>
-    </div>
-    <div class="row">
-      <div class="col-12 chat-section">
-        <div class="chat1">dsfsdfsdfs</div>
-        <div class="chat2">dsfsdfsdfs</div>
-      </div>
-      <div class="col-12 text-center"><span>We run on intercom </span></div>
-    </div>
-    <div class="row">
-      <div class="col-12 d-flex">
-        <input type="text" class="form-control" />
-        <ul class="shareicon">
-          <li>
-            <a href=""
-              ><img src="https://img.icons8.com/windows/32/000000/gif.png"
-            /></a>
-          </li>
-          <li>
-            <a href=""><i class="fas fa-paperclip"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fas fa-smile"></i></a>
-          </li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
+      <!-- chat box component -->
+      <app-chat-box [chatData]="message"></app-chat-box>
+
+      <!-- input -->
+      <form [formGroup]="formGroup">
+        <div class="row">
+          <div class="col-12 d-flex">
+            <mat-form-field class="example-full-width">
+              <input
+                type="text"
+                name="text_message"
+                id="text_message"
+                formControlName="text_message"
+                (keydown.enter)="onKey($event)"
+                placeholder="Write your reply .."
+                matInput
+              />
+              <mat-icon matSuffix (click)="onGifClick()" class="mr-2"
+                >gif</mat-icon
+              >
+              <mat-icon matSuffix class="mr-2">insert_emoticon</mat-icon>
+              <mat-icon matSuffix class="mr-2">attach_file</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

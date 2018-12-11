@@ -8,6 +8,10 @@ import { ChatBoxComponent } from './components/chat-box/chat-box.component';
 import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 import { MessageTabComponent } from './components/message-tab/message-tab.component';
 import { MsgWindowComponent } from './components/msg-window/msg-window.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,13 @@ import { MsgWindowComponent } from './components/msg-window/msg-window.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -12,9 +12,17 @@ body {
 }
 
 .window {
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 1px 1px 17px 4px #ccc;
+  border-radius: 10px;
+  padding: 0 15px 0 15px;
+  box-shadow: 1px 1px 20px 5px #ccc;
+}
+
+.bg-primary {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: #fff;
+  padding: 22px 8px;
+  background-color: #006bb4 !important;
 }
 
 .members-list li {
@@ -30,8 +38,9 @@ body {
 }
 
 .chat1 {
-  background-color: lightblue;
-  width: 100%;
+  background-color: #006cf8;
+  color: #fff;
+  width: auto;
   float: right;
   display: inline-block;
   text-align: right;
@@ -41,13 +50,19 @@ body {
 }
 
 .chat2 {
-  width: 100%;
+  width: auto;
   display: inline-block;
   padding: 10px;
 
   margin-top: 15px;
 }
 
+.chat-default {
+  width: 100%;
+}
+.example-full-width {
+  width: -webkit-fill-available;
+}
 .shareicon {
   padding-left: 0;
 }
@@ -61,4 +76,12 @@ body {
 .chat-section {
   height: 380px;
   overflow: auto;
+}
+
+md-input-container.md-input-focused label {
+  display: none;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid #e2e2e2;
 }

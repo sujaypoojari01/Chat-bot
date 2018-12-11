@@ -1,3 +1,22 @@
-<p>
-  chat-box works!
-</p>
+<div class="row border-bottom-1">
+  <div class="col-12 chat-section">
+    <!-- <div *ngFor="let chat of chats; let i = index"> -->
+    <!--
+      <div>
+          <div class="chat1" *ngIf="chat.id == 1">{{ chat.msg }}</div>
+
+        </div>
+        <label class="chat2" *ngIf="chat.id == 2">{{ chat.msg }}</label>
+      </div>
+    -->
+    <div *ngFor="let chat of chats; let i = index">
+      <div class="chat-default" [ngClass]="chat.id == true ? 'chat1' : 'chat2'">
+        {{ chat.msg }}
+      </div>
+    </div>
+    <!-- </div> -->
+    <!--
+      <div class="col-12 text-center mb-2"><span>We run on intercom </span></div>
+    -->
+  </div>
+</div>
