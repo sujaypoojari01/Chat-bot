@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "running firebase use --addNo project active. Run with --project <projectId> or define an alias by": "chat-bot-d4e6a",
+    "default": "chat-bot-d4e6a",
+    "chat": "angular5-crud-45599"
+  }
+}
