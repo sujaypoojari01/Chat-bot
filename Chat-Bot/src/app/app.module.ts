@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatBoxComponent } from './components/chat-box/chat-box.component';
 import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
+import { MessageTabComponent } from './components/message-tab/message-tab.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatBoxComponent,
-    UserAvatarComponent
+    UserAvatarComponent,
+    MessageTabComponent
   ],
   imports: [
     BrowserModule,
